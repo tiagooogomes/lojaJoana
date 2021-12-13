@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <form>
+                <input type="text" id="nomeDoCliente"/>
+                <input type="date" id="dataDoVencimento"/>
+                <input type="number" id="valorDaCompra"/>
+                <input type="button" onclick="inserirArray()" />
+                <input type="button" onclick="adiconarJuros()" />
+            </form>
+            <table id="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>Vencimento</td>
+                    <td>Valor</td>
+                    <td>Total a pagar</td>
+                </tr>
+                <tbody id="tabela2">
+
+                </tbody>
+
+            </main>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
