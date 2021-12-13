@@ -15,6 +15,12 @@ h1{
     margin-top: 5%;
 }
 
+h3{
+    color: #B8B7BD;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
 input{
     width: 25%;
     height: 85px;
@@ -36,6 +42,10 @@ input{
     border-radius: 15px;
 }
 
+#campos input::placeholder{
+    color: #B8B7BD;
+}
+
 #botoes{
     width: 60%;
     display: flex;
@@ -51,8 +61,13 @@ input{
     font-size: 40px;
 }
 
+#botoes input:hover{
+    cursor: pointer;
+}
+
 tr, table{
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 thead td{

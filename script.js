@@ -1,9 +1,5 @@
-const arrayDaTabela = [
-    
-];
+const arrayDaTabela = [];
 const tempoDoDia = 1000 * 3600 * 24;
-// let nomeDoCliente = document.getElementById('nomeDoCliente').value;
-
 
 const dadosFornecidos = () => ({
 
@@ -14,8 +10,8 @@ const dadosFornecidos = () => ({
 });
 
 function limpardados() {
-    let limp = document.getElementById("tabela2");
-    limp.innerHTML = "";
+    let limpar = document.getElementById("tabela2");
+    limpar.innerHTML = "";
 }
 
 function adicionarNaPagina(item){
@@ -38,27 +34,19 @@ function adicionarNaPagina(item){
     clienteTr.appendChild(totaTd);
 
     let tabela = document.getElementById("tabela2");
-
     tabela.appendChild(clienteTr);
-
-    console.log("FUNCIONA")
 }
-
 
 function inserirArray(){
    
-    arrayDaTabela.push(dadosFornecidos());
-    console.log(document.getElementById('nomeDoCliente').value);
-    
+    arrayDaTabela.push(dadosFornecidos());  
     limpardados();
     arrayDaTabela.forEach(adicionarNaPagina);
-    
-    console.log(dadosFornecidos);
-    console.log(arrayDaTabela);
-    console.log(document.getElementById('dataDoVencimento').value)
-    console.log(Date()); 
-}
 
+    document.getElementById("nomeDoCliente").value = "";
+    document.getElementById('dataDoVencimento').value = "";
+    document.getElementById('valorDaCompra').value = "";
+}
 
 function adiconarJuros(){
 
@@ -68,25 +56,18 @@ function adiconarJuros(){
         const hoje = new Date();
         const vence = new Date(item.vencimento);
 
-        console.log(vence);
         let diferencaDeDias = (hoje.getTime() - vence.getTime()) / tempoDoDia;
         let taxa = (diferencaDeDias * 0.001) + 0.02;
         let valorCompra = item.valor;
         let totalPagar = "";
         
-        console.log(diferencaDeDias);
-
         if(diferencaDeDias > 0){
-            totalPagar = valorCompra + valorCompra * taxa;
-            console.log("É MAIOR");
+            totalPagar = (valorCompra + valorCompra * taxa).toFixed(2);
         }else{
             totalPagar = valorCompra
         }
 
-        item.total = totalPagar;
-        console.log(arrayDaTabela);
-
-       
+        item.total = totalPagar;      
         adicionarNaPagina(item);
 
     });
