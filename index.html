@@ -3,29 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
+        <!-- <link rel="shortcut icon" href="img/icone.svg" type="image/x-icon" /> -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <main>
+            <h1>Contabilidade da Lojinha da <span>Joana</span></h1>
             <form>
-                <input type="text" id="nomeDoCliente"/>
-                <input type="date" id="dataDoVencimento"/>
-                <input type="number" id="valorDaCompra"/>
-                <input type="button" onclick="inserirArray()" />
-                <input type="button" onclick="adiconarJuros()" />
+                <div id="campos">
+                    <input type="text" id="nomeDoCliente" placeholder="Nome"/>
+                    <input type="date" id="dataDoVencimento"/>
+                    <input type="number" id="valorDaCompra" placeholder="Valor"/>
+                </div>
+                <div id="botoes">
+                    <input type="button" onclick="inserirArray()" value="SALVAR"/>
+                    <input type="button" onclick="adiconarJuros()" value="CALCULAR"/>
+                </div>
             </form>
             <table id="tabela">
-                <tr>
-                    <td>Nome</td>
-                    <td>Vencimento</td>
-                    <td>Valor</td>
-                    <td>Total a pagar</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <td>Nome</td>
+                        <td>Vencimento</td>
+                        <td>Valor</td>
+                        <td>Total Com Juros</td>
+                    </tr>
+                </thead>
                 <tbody id="tabela2">
-
                 </tbody>
-
-            </main>
+            </table>    
         </main>
+        <footer>
+            <h3>by. Aspirante Tiago Santos</h3>
+        </footer>
         <script src="script.js"></script>
     </body>
 </html>

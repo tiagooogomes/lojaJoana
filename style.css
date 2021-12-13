@@ -1,0 +1,81 @@
+body{
+    background-color: #0E1A26;
+    margin: 0;
+}
+
+span{
+    display: block;
+}
+
+h1{
+    color: #B8B7BD;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lily Script One', cursive;
+    margin-top: 5%;
+}
+
+input{
+    width: 25%;
+    height: 85px;
+}
+
+#campos{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+#campos input{
+    background-color: transparent;
+    border: 3px solid #B8B7BD;
+    color: #B8B7BD;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#botoes{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+#botoes input{
+    background-color: #B8B7BD;
+    width: 38%;
+    border-radius: 15px;
+    color: #0E1A26;
+    font-size: 40px;
+}
+
+tr, table{
+    width: 100%;
+}
+
+thead td{
+    background-color: #B8B7BD;
+    color: #0E1A26;
+}
+
+td{
+    width: 25%;
+    height: 60px;
+    text-align: center;
+    font-size: 40px;
+    color: #B8B7BD;
+    border-radius: 10px;
+}
+
+table{
+    margin-top: 10%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+}
